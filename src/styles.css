@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.3em;
+  grid-template-columns: 30% auto;
+}
+section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
