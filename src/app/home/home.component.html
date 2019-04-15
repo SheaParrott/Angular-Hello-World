@@ -1,5 +1,26 @@
 <main>
   <h1 [class.gray]="h1Style">Home</h1>
+  <h1 [style.color]="h1Style ? 'gray' : 'black'">Home1/2</h1>
+  <h1
+    [ngClass]="{
+      gray: h1Style,
+      large: !h1Style
+    }"
+  >
+    Home2
+  </h1>
+  <h1
+    [ngStyle]="{
+      color: h1Style ? 'gray' : 'black',
+      'font-size': !h1Style ? '3rem' : '2rem'
+    }"
+  >
+    Home3
+  </h1>
 
   <button (click)="firstClick()">Hey Click me!</button>
+
+  <h1 [class.gray]="data.h1StyleFromService">HomeFromService</h1>
+
+  <button (click)="secondClick()">Hey Click me!</button>
 </main>
