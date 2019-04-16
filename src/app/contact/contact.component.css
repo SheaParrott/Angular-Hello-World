@@ -8,7 +8,7 @@ textarea {
   margin-bottom: 20px;
   padding: 1em;
 }
-.error {
+.errors {
   margin-top: -20px;
   background: yellow;
   padding: 0.5em;

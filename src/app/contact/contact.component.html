@@ -1,6 +1,6 @@
 <h1>Contact Us</h1>
-<form [formGroup]="messageForm" (ngSubmit)="(onSubmit)">
-  <h5 *ngIf="success">You form is Invalid!</h5>
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <h5 *ngIf="!success && submitted">You form is Invalid!</h5>
   <label>
     Name:
     <input type="text" formControlName="name" />
@@ -25,7 +25,7 @@
   <input type="submit" value="send message" class="cta" />
 </form>
 
-<div *ngIf="submitted" class="results">
+<div class="results">
   <strong>
     Name:
   </strong>
