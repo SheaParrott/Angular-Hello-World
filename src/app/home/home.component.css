@@ -6,3 +6,24 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  background: #dad8d8;
+  padding: 2em;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  display: grid;
+  grid-template-columns: 60px auto;
+}
+p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+img {
+  border-radius: 50%;
+  width: 100%;
+}

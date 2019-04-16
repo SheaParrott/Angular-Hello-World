@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { FormBuilder, FormGroup, Validators } from '@Angular/forms'
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  messageForm: FormGroup
+  submitted: boolean = false
+  success: boolean = false
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private formBuilder: FormBuilder) {
+    this.messageForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      message: ['', Validators.required]
+    })
   }
 
+  onSubmit = () => {
+    this.submitted = true
+    if (this.messageForm.invalid) {
+      return
+    }
+    this.success = true
+    // this is where Put request / api endpoint will go for submitted form
+  }
+
+  ngOnInit() {}
 }
